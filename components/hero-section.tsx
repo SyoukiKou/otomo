@@ -18,38 +18,35 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <p className="text-sm tracking-widest text-muted-foreground mb-6 uppercase">
-          Career Consultation for Music Students
-        </p>
         
         <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-medium leading-tight mb-8 text-balance">
-          <span className="block">音大卒業して、</span>
-          <span className="block">そのあとどうする問題。</span>
+          <span className="block">好きなことと仕事、</span>
+          <span className="block">どう両立させる？</span>
         </h1>
 
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed text-pretty">
-          きっとあなたの心にあるのは、
+          音楽の夢を諦めたくない。
           <br className="hidden md:block" />
-          <span className="font-medium text-foreground">「音楽を続けたい」</span>という本音だと思います。
+          でも生活の安定も必要。
         </p>
 
         <p className="text-xl md:text-2xl font-bold text-primary mb-6">
-          諦めなくていい！
+          その両方、叶えられます。
         </p>
 
         <p className="text-lg md:text-xl text-foreground max-w-2xl mx-auto mb-8 leading-relaxed text-pretty">
-          パラレルキャリアで、
+          otomo は、あなたのキャリア選択を
           <br className="hidden md:block" />
-          より豊かな人生を歩めるという選択肢があります。
+          プロが一緒に考えるサービスです。
         </p>
 
         <div className="bg-card border border-border rounded-2xl p-6 md:p-8 max-w-xl mx-auto mb-12 shadow-sm">
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-            <span className="font-semibold text-foreground">大手企業に週5勤務</span>しながら
+            <span className="font-semibold text-foreground">好きなことを続けながら</span>
             <br />
-            <span className="font-semibold text-foreground">音楽のキャリアも実現する</span>私と
+            <span className="font-semibold text-foreground">安定した生活も実現する</span>
             <br />
-            <span className="text-primary font-bold text-lg md:text-xl">一緒に考えましょう！</span>
+            <span className="text-primary font-bold text-lg md:text-xl">その両立方法を一緒に考えます！</span>
           </p>
         </div>
 

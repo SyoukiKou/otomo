@@ -46,7 +46,7 @@ export function Header() {
               window.scrollTo({ top: 0, behavior: "smooth" })
             }}
           >
-            音大生キャリア相談
+            otomo
           </a>
 
           {/* Desktop Nav */}

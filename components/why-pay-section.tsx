@@ -11,11 +11,11 @@ const comparisons = [
     notThis: "「音楽を諦めろ」と説得される",
     butThis: "「どう続けるか」を一緒に戦略立案",
     detail: "音楽を辞める・続けるの二択ではなく、あなたの人生に音楽をどう組み込むかを設計します。"
-  },
-  {
-    notThis: "一般論のキャリアアドバイス",
-    butThis: "音大生×社会人視点のリアルな両立戦略",
-    detail: "「音楽しかやってこなかった」あなただからこそ持っている強みを、企業が求める言葉に翻訳します。"
+   {
+     notThis: "\u一般論のキャリアアドバイス",
+     butThis: "\u音楽×仕事両立の実践的アドバイス",
+     detail: "\u音楽を続けながら仕事をしている人の視点から、パラレルキャリアの現実的な両立戦略をお伝えします。"
+   }
   }
 ]
 
@@ -42,11 +42,8 @@ export function WhyPaySection() {
     <section className="py-24 px-6 bg-muted/30">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-sm tracking-widest text-primary mb-4 uppercase">
-            Why This Consultation
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-medium mb-6 text-balance">
-            この相談で得られること
+            otomo の相談で得られること
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             就職エージェントとは違う。

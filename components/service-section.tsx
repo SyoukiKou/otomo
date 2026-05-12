@@ -4,15 +4,15 @@ import { Check } from "lucide-react"
 const features = [
   {
     title: "音楽と仕事、具体的な両立方法を一緒に考える",
-    description: "「続けたい」気持ちはあっても、どう両立すればいいかわからない。週5で働きながら演奏活動を続ける私が、時間の使い方、練習場所の確保、仕事選びのコツなど、リアルな両立ノウハウをお伝えします。"
+    description: "「続けたい」気持ちはあっても、どう両立すればいいかわからない。パラレルキャリアの実践者から、時間の使い方、練習環境の確保、仕事選びのコツなど、リアルな両立ノウハウをお伝えします。"
   },
   {
     title: "あなたの強みを「企業が求めるスキル」の言葉に翻訳",
-    description: "音大生が当たり前にやってきたこと—毎日の練習、本番での集中力、先生との関係構築、チームでの演奏。これらは企業が求める「継続力」「プレゼン力」「コミュニケーション力」「協調性」そのもの。現役社会人の視点から、あなたの経験を就活で伝わる言葉に言語化します。"
+    description: "音楽活動を通じてあなたが培ってきたこと—毎日の練習、本番での集中力、先生や仲間との関係構築、チームでの協力。これらは企業が求める「継続力」「プレゼン力」「コミュニケーション力」「協調性」そのもの。社会人の視点から、あなたの経験を就活で伝わる言葉に翻訳します。"
   },
   {
     title: "楽器・環境に合わせた現実的なプランを設計",
-    description: "バイオリンなら自宅練習も可能、ピアノはスタジオ確保が課題、管楽器は防音問題...楽器によって続けやすさは異なります。あなたの楽器、住環境、経済状況に合わせて「本当に続けられる」具体的なプランを一緒に考えます。"
+    description: "楽器や住環境によって両立のしやすさは異なります。あなたの楽器、住環境、経済状況に合わせて「本当に続けられる」具体的なプランを一緒に考えます。"
   }
 ]
 
@@ -26,11 +26,8 @@ export function ServiceSection() {
     <section id="service" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-sm tracking-widest text-primary mb-4 uppercase">
-            What I Offer
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-medium mb-6 text-balance">
-            キャリア相談でできること
+            otomo でできること
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             1時間のセッションで、あなたの「今」と「これから」を整理します。

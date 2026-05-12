@@ -16,8 +16,8 @@ const notoSerifJP = Noto_Serif_JP({
 });
 
 export const metadata: Metadata = {
-  title: '音大生キャリア相談 | 上杉未宇',
-  description: '音楽を続けるか、就職するか。悩んでいるあなたへ。パラレルキャリアアーティストが、あなたの人生の選択肢を一緒に考えます。',
+  title: 'otomo - キャリア相談サービス',
+  description: '音楽と仕事の両立を目指すあなたへ。キャリア相談を通じて、自分の人生の選択肢を一緒に考えるサービスです。',
   generator: 'v0.app',
   icons: {
     icon: [

@@ -29,9 +29,6 @@ export function PainPointsSection() {
     <section className="py-24 px-6 bg-secondary/50">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-sm tracking-widest text-primary mb-4 uppercase">
-            Your Struggles
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-medium mb-6 text-balance">
             こんな悩み、ありませんか？
           </h2>

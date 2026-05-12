@@ -30,11 +30,8 @@ export function ContactSection() {
     <section id="contact" className="py-24 px-6">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-sm tracking-widest text-primary mb-4 uppercase">
-            Book a Session
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-medium mb-6 text-balance">
-            相談を予約する
+            otomo に相談する
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             まずは気軽に話してみませんか。
@@ -107,9 +104,11 @@ export function ContactSection() {
                 asChild
               >
                 <a 
-                  href="https://linkbio.co/miuviolin" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                  href="#contact-form" 
+                  onClick={(e) => {
+                    e.preventDefault()
+                    document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })
+                  }}
                 >
                   予約フォームへ進む
                 </a>

@@ -1,48 +1,27 @@
-import { Badge } from "@/components/ui/badge"
-import { Music, Briefcase, GraduationCap, Award, Users, Building } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
+import { Lightbulb, Users, Target, Heart } from "lucide-react"
 
-const timeline = [
+const features = [
   {
-    year: "2004",
-    event: "ピアノを始める（スズキメソード）",
-    icon: Music
+    icon: Target,
+    title: "あなたの目標を整理する",
+    description: "何がしたいのか、本当は何を大切にしたいのか。漠然とした不安を明確にしていきます。"
   },
   {
-    year: "2006",
-    event: "ヴァイオリンを始める",
-    icon: Music
+    icon: Lightbulb,
+    title: "隠れた強みを見つける",
+    description: "音楽活動を通じて身についたあなたの力を、企業が求める言葉に翻訳します。"
   },
   {
-    year: "2014",
-    event: "ノートルダム清心中・高等学校入学、弦楽部長・コンサートミストレスを務める",
-    icon: GraduationCap
+    icon: Users,
+    title: "実例をもとに考える",
+    description: "実際にパラレルキャリアを実践している相談者からのリアルなアドバイス。"
   },
   {
-    year: "2020",
-    event: "早稲田大学文学部入学、福祉施設でのボランティア演奏団体を創設",
-    icon: Users
-  },
-  {
-    year: "2024",
-    event: "大手通信会社に入社、法人営業として勤務開始",
-    icon: Briefcase
-  },
-  {
-    year: "2025",
-    event: "全日本弦楽コンクール優秀賞受賞、ラ・フォルジュルネ東京出演",
-    icon: Award
-  },
-  {
-    year: "現在",
-    event: "会社員として週5日勤務しながら、年間20箇所以上で演奏活動を継続。芸術×脳科学によるウェルビーイング向上プログラムの開発や、音楽と異分野のコラボレーション企画の制作・実現にも携わるなど、芸術の社会実装にも取り組む。",
-    icon: Building
+    icon: Heart,
+    title: "選択肢を一緒に検討",
+    description: "二者択一ではなく、あなたらしい第三の道を一緒に探します。"
   }
-]
-
-const highlights = [
-  "早稲田大学在学中にエンカレッジで毎月30人の学生とキャリア面談を実施",
-  "芸術×脳科学のウェルビーイングプログラム開発企業「The Hearth」創業",
-  "Marunouchi Street Parkにミュージシャンとして参画中"
 ]
 
 export function ProfileSection() {
@@ -50,82 +29,51 @@ export function ProfileSection() {
     <section id="about" className="py-24 px-6 bg-secondary/30">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-sm tracking-widest text-primary mb-4 uppercase">
-            About Me
-          </p>
           <h2 className="font-serif text-3xl md:text-4xl font-medium mb-6 text-balance">
-            相談相手について
+            otomo について
           </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            好きなことと仕事、両立したいすべての人へ
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Profile Card */}
-          <div className="bg-card rounded-2xl p-8 shadow-sm">
-            <div className="flex flex-col items-center text-center mb-8">
-              <div className="w-32 h-32 rounded-full overflow-hidden mb-6">
-                <img 
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/miuuesugi.png-9J7EDIggErM23F47P0RHUSJrsrwjph.jpeg" 
-                  alt="上杉未宇 - ヴァイオリンを持つプロフィール写真"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <h3 className="font-serif text-2xl font-medium mb-2">上杉 未宇</h3>
-              <p className="text-muted-foreground mb-4">Miu Uesugi</p>
-              <Badge variant="secondary" className="mb-6">
-                パラレルキャリアアーティスト
-              </Badge>
-            </div>
+        <div className="bg-card rounded-2xl p-8 md:p-12 shadow-sm mb-16">
+          <h3 className="font-serif text-2xl font-medium mb-6 text-center">otomo とは</h3>
+          <p className="text-muted-foreground leading-relaxed text-center mb-6">
+            otomo は、「好きなことと仕事の両立」を実現したいあなたのためのキャリア相談サービスです。
+            <br className="hidden md:block" />
+            音楽と仕事、または好きな活動と生活費のバランスを取ることに悩んでいませんか？
+          </p>
+          <p className="text-foreground leading-relaxed text-center">
+            音楽の夢を諦める必要はありません。
+            パラレルキャリアを実践した経験を持つ相談者が、あなたの人生設計を一緒に考えます。
+          </p>
+        </div>
 
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              2001年生まれ。早稲田大学文学部文学科卒業。2歳よりピアノ、5歳よりヴァイオリンを始める。
-              現在は大手通信会社で法人営業として働きながら、演奏活動・起業活動を両立する
-              <strong className="text-foreground">「パラレルキャリア」</strong>を実践中。
-            </p>
-
-            <div className="space-y-3">
-              {highlights.map((highlight, index) => (
-                <div key={index} className="flex items-start gap-3 text-sm">
-                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  <span className="text-muted-foreground">{highlight}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Timeline */}
-          <div className="relative">
-            <h4 className="font-medium text-lg mb-8">これまでの歩み</h4>
-            <div className="space-y-6">
-              {timeline.map((item, index) => (
-                <div key={index} className="flex gap-4">
-                  <div className="flex flex-col items-center">
-                    <div className="w-10 h-10 rounded-full bg-card border-2 border-primary/20 flex items-center justify-center flex-shrink-0">
-                      {item.icon ? (
-                        <item.icon className="w-4 h-4 text-primary" />
-                      ) : (
-                        <div className="w-2 h-2 rounded-full bg-primary" />
-                      )}
-                    </div>
-                    {index < timeline.length - 1 && (
-                      <div className="w-px h-full bg-border mt-2" />
-                    )}
-                  </div>
-                  <div className="pb-6">
-                    <span className="text-sm font-medium text-primary">{item.year}</span>
-                    <p className="text-muted-foreground text-sm mt-1">{item.event}</p>
+        <div className="grid md:grid-cols-2 gap-6">
+          {features.map((feature, index) => (
+            <Card key={index} className="border-0 shadow-sm bg-background">
+              <CardContent className="p-8">
+                <div className="flex gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <feature.icon className="w-6 h-6 text-primary" />
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
+                <h4 className="font-medium text-lg mb-3">{feature.title}</h4>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Message */}
         <div className="mt-16 max-w-3xl mx-auto text-center">
-          <blockquote className="font-serif text-xl md:text-2xl text-foreground/80 leading-relaxed italic">
-            &ldquo;音楽を辞めるか続けるか、ではなく、
+          <blockquote className="font-serif text-xl md:text-2xl text-foreground/80 leading-relaxed">
+            好きなことと仕事、どちらかを選ぶ必要はありません。
             <br className="hidden md:block" />
-            どうすれば音楽と一生付き合っていけるかを一緒に考えたい。&rdquo;
+            あなたらしい両立の道を、一緒に見つけましょう。
           </blockquote>
         </div>
       </div>
