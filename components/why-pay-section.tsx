@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
-import { X, Check, ArrowRight } from "lucide-react"
+import { X, Check } from "lucide-react"
 
 const comparisons = [
   {
@@ -16,24 +16,6 @@ const comparisons = [
     notThis: "一般論のキャリアアドバイス",
     butThis: "音楽×仕事両立の実践的アドバイス",
     detail: "音楽を続けながら仕事をしている人の視点から、パラレルキャリアの現実的な両立戦略をお伝えします。"
-  }
-]
-
-const valuePoints = [
-  {
-    number: "01",
-    title: "自己理解が深まる",
-    description: "漠然とした不安を言語化し、自分が本当に大切にしたいものが見えてくる"
-  },
-  {
-    number: "02",
-    title: "選択肢が増える",
-    description: "知らなかった働き方、キャリアパス、両立の方法など具体的な選択肢を知れる"
-  },
-  {
-    number: "03",
-    title: "行動に移せる",
-    description: "「何から始めればいいかわからない」から「まずこれをやる」が明確になる"
   }
 ]
 
@@ -75,35 +57,7 @@ export function WhyPaySection() {
           ))}
         </div>
 
-        {/* Value Points */}
-        <div className="text-center mb-12">
-          <h3 className="font-serif text-2xl font-medium mb-4">
-            1時間の相談後、あなたは...
-          </h3>
-        </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {valuePoints.map((point, index) => (
-            <Card key={index} className="border-0 shadow-sm bg-card text-center">
-              <CardContent className="p-8">
-                <span className="text-4xl font-serif text-primary/30 block mb-4">
-                  {point.number}
-                </span>
-                <h4 className="font-medium text-lg mb-3">{point.title}</h4>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {point.description}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground">
-            <ArrowRight className="w-4 h-4 inline mr-2" />
-            だから、3,000円は「これからを整えるための相談料」です
-          </p>
-        </div>
       </div>
     </section>
   )
