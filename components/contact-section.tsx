@@ -67,7 +67,7 @@ export function ContactSection() {
                   <h3 className="font-medium text-lg">カフェで対面</h3>
                 </div>
                 <p className="text-sm text-muted-foreground mb-6">
-                  東京都内のカフェで直接お会いしてお話しします。飲み物代は料金に含まれています。
+                  東京都内のカフェで直接お会いしてお話しします。飲み物代はご負担をお願いします。
                 </p>
                 <ul className="text-sm text-muted-foreground space-y-2 mb-6">
                   <li>・ 落ち着いた雰囲気で話せる</li>

@@ -17,7 +17,7 @@ const features = [
 ]
 
 const consultationOptions = [
-  "カフェで対面（お茶代込み）",
+  "カフェで対面（お茶代はご負担ください）",
   "オンライン（Zoom）"
 ]
 
@@ -69,7 +69,7 @@ export function ServiceSection() {
               ))}
             </div>
             <p className="text-sm text-muted-foreground">
-              カフェでの対面の場合、飲み物代は料金に含まれています。
+              カフェでの対面の場合、飲み物代はご負担をお願いします。
             </p>
           </CardContent>
         </Card>

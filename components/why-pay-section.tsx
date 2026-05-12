@@ -101,7 +101,7 @@ export function WhyPaySection() {
         <div className="text-center mt-12">
           <p className="text-muted-foreground">
             <ArrowRight className="w-4 h-4 inline mr-2" />
-            だから、3,000円は「紹介料」ではなく「自己投資」です
+            だから、3,000円は「これからを整えるための相談料」です
           </p>
         </div>
       </div>
