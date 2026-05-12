@@ -103,18 +103,16 @@ export function ContactSection() {
                 className="rounded-full px-10"
                 asChild
               >
-                <a 
-                  href="#contact-form" 
-                  onClick={(e) => {
-                    e.preventDefault()
-                    document.getElementById('contact-form')?.scrollIntoView({ behavior: 'smooth' })
-                  }}
+                <a
+                  href="https://linkbio.co/miuviolin"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   予約フォームへ進む
                 </a>
               </Button>
               <p className="text-xs text-muted-foreground mt-4">
-                外部予約ページに移動します
+                外部予約ページに移動します（新しいタブで開きます）
               </p>
             </div>
           </CardContent>

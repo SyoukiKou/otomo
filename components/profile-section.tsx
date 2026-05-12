@@ -26,6 +26,8 @@ const features = [
   }
 ]
 
+import SyiaImage from "./syia.jpeg"
+
 const coaches = [
   {
     name: "上杉 未宇",
@@ -37,19 +39,22 @@ const coaches = [
     bio:
       "2001年生まれ。早稲田大学文学部文学科卒業。2歳よりピアノ、5歳よりヴァイオリンを始める。現在は会社員として働きながら、演奏活動や企画づくりを両立するパラレルキャリアを実践している。",
     tags: ["パラレルキャリア", "音楽と仕事の両立", "キャリア相談"],
+    link: "https://miuviolin.com/",
+    linkLabel: "Miuのサイトを見る",
   },
   {
     name: "SYIA",
     nameEn: "しあ",
     role: "ニューロ・メディア・アーティスト / ヴァイオリニスト",
-    image: null,
-    imageAlt: "SYIAのプロフィールアイコン",
+    image: SyiaImage,
+    imageAlt: "SYIA の写真",
     bio:
       "中学生よりヴァイオリニスト活動を開始。現在は東京科学大学修士課程で脳科学と数理モデルを融合させ、芸術による感動体験の本質に迫る研究と、科学と芸術の横断的な社会実装に取り組んでいる。",
     tags: ["脳科学", "芸術と社会実装", "ヴァイオリン"],
     link: "https://syiaviolin.com/",
     linkLabel: "SYIAのサイトを見る",
   },
+ 
 ]
 
 export function ProfileSection() {
