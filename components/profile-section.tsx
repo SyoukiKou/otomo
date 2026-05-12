@@ -45,7 +45,7 @@ const coaches = [
   {
     name: "SYIA",
     nameEn: "しあ",
-    role: "ニューロ・メディア・アーティスト / ヴァイオリニスト",
+    role: "ニューロメディアアーティスト",
     image: SyiaImage,
     imageAlt: "SYIA の写真",
     bio:
@@ -118,11 +118,16 @@ export function ProfileSection() {
                   <div className="flex flex-col sm:flex-row gap-6">
                     <div className="flex-shrink-0">
                       {coach.image ? (
-                        <img
-                          src={coach.image}
-                          alt={coach.imageAlt}
-                          className="w-28 h-28 rounded-2xl object-cover"
-                        />
+                        (() => {
+                          const src = typeof coach.image === 'string' ? coach.image : coach.image.src
+                          return (
+                            <img
+                              src={src}
+                              alt={coach.imageAlt}
+                              className="w-28 h-28 rounded-2xl object-cover"
+                            />
+                          )
+                        })()
                       ) : (
                         <div className="w-28 h-28 rounded-2xl bg-primary/10 flex items-center justify-center text-2xl font-serif font-medium text-primary">
                           {coach.name.slice(0, 2)}
