@@ -17,8 +17,8 @@ const features = [
 ]
 
 const consultationOptions = [
-  "カフェで対面（お茶代はご負担ください）",
-  "オンライン（Zoom）"
+  "カフェで対面",
+  "オンライン"
 ]
 
 export function ServiceSection() {
