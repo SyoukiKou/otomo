@@ -32,7 +32,7 @@ const coaches = [
   {
     name: "上杉 未宇",
     nameEn: "Miu Uesugi",
-    role: "otomo 相談相手",
+    role: "ヴァイオリニスト",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/miuuesugi.png-9J7EDIggErM23F47P0RHUSJrsrwjph.jpeg",
     imageAlt: "上杉未宇 - ヴァイオリンを持つプロフィール写真",
@@ -44,7 +44,7 @@ const coaches = [
   },
   {
     name: "SYIA",
-    nameEn: "しあ",
+    nameEn: "しあくん",
     role: "ニューロメディアアーティスト",
     image: SyiaImage,
     imageAlt: "SYIA の写真",
@@ -75,10 +75,10 @@ export function ProfileSection() {
           <p className="text-muted-foreground leading-relaxed text-center mb-6">
             otomo は、「好きなことと仕事の両立」を実現したいあなたのためのキャリア相談サービスです。
             <br className="hidden md:block" />
-            音楽と仕事、または好きな活動と生活費のバランスを取ることに悩んでいませんか？
+            芸術と仕事、または好きな活動と生活費のバランスを取ることに悩んでいませんか？
           </p>
           <p className="text-foreground leading-relaxed text-center">
-            音楽の夢を諦める必要はありません。
+            芸術の夢を諦める必要はありません。
             相談内容に合わせて、実践者の視点からあなたの人生設計を一緒に考えます。
           </p>
         </div>
@@ -104,10 +104,10 @@ export function ProfileSection() {
         <div className="mt-16">
           <div className="text-center mb-10">
             <h3 className="font-serif text-2xl md:text-3xl font-medium mb-3">
-              コーチ紹介
+              パートナー紹介
             </h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              現在のコーチを紹介します。今後も順次追加していけるよう、この一覧に積み上げていきます。
+              現在のパートナーを紹介します。
             </p>
           </div>
 
