@@ -98,8 +98,8 @@ export function ContactSection() {
                 <span className="font-serif text-4xl font-medium">3,000</span>
                 <span className="text-muted-foreground">円 / 60分</span>
               </div>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="rounded-full px-10"
                 asChild
               >
