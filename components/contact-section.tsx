@@ -104,7 +104,7 @@ export function ContactSection() {
                 asChild
               >
                 <a
-                  href="https://linkbio.co/miuviolin"
+                  href="https://forms.gle/PVXd6AddegWPT5Tt9"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
