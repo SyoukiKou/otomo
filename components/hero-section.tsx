@@ -18,7 +18,7 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        
+
         <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-medium leading-tight mb-12 md:mb-16 text-balance">
           <span className="block">好きなことと仕事、</span>
           <span className="block">どう両立させる？</span>
@@ -51,15 +51,15 @@ export function HeroSection() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             onClick={scrollToContact}
             className="text-base px-8 py-6 rounded-full"
           >
             相談を予約する
           </Button>
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             size="lg"
             onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
             className="text-base px-8 py-6 rounded-full"
