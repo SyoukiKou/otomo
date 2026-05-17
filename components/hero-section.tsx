@@ -9,17 +9,17 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen pt-20 md:pt-24 flex items-center justify-center overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M42 8v22.5c-1.2-.5-2.5-.8-4-.8-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10V18h6V8H42zM36 44c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
         }} />
       </div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
 
-        <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-medium leading-tight mb-12 md:mb-16 text-balance">
+        <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl font-medium leading-tight mb-8 text-balance">
           <span className="block">好きなことと仕事、</span>
           <span className="block">どう両立させる？</span>
         </h1>
@@ -40,7 +40,7 @@ export function HeroSection() {
           プロが一緒に考えるサービスです。
         </p>
 
-        <div className="bg-card border border-border rounded-2xl p-6 md:p-8 max-w-xl mx-auto mb-16 shadow-sm relative z-20">
+        <div className="bg-card border border-border rounded-2xl p-6 md:p-8 max-w-xl mx-auto mb-12 shadow-sm">
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
             <span className="font-semibold text-foreground">好きなことを続けながら</span>
             <br />
