@@ -1,26 +1,32 @@
 import type { Metadata } from 'next'
 import { FAQSection, faqs } from '@/components/faq-section'
 
-export const metadata: Metadata = {
-  title: 'よくあるご質問 — otomo',
-  description: 'otomo のよくあるご質問一覧。相談内容、支払い、キャンセルなどに関するFAQ。',
-  openGraph: {
+export async function generateMetadata({ request }: { request: Request }): Promise<Metadata> {
+  const url = new URL(request.url)
+  const origin = url.origin
+  const canonical = `${origin}/faq`
+
+  return {
     title: 'よくあるご質問 — otomo',
     description: 'otomo のよくあるご質問一覧。相談内容、支払い、キャンセルなどに関するFAQ。',
-    url: `${process.env.SITE_URL || 'https://example.com'}/faq`,
-    images: [
-      {
-        url: `${process.env.SITE_URL || 'https://example.com'}/og-faq.svg`,
-        width: 1200,
-        height: 630,
-        alt: 'otomo FAQ',
-      },
-    ],
-    type: 'website',
-  },
-  alternates: {
-    canonical: `${process.env.SITE_URL || 'https://example.com'}/faq`,
-  },
+    openGraph: {
+      title: 'よくあるご質問 — otomo',
+      description: 'otomo のよくあるご質問一覧。相談内容、支払い、キャンセルなどに関するFAQ。',
+      url: canonical,
+      images: [
+        {
+          url: `${origin}/og-faq.svg`,
+          width: 1200,
+          height: 630,
+          alt: 'otomo FAQ',
+        },
+      ],
+      type: 'website',
+    },
+    alternates: {
+      canonical,
+    },
+  }
 }
 
 export default function FAQPage() {
@@ -37,6 +43,7 @@ export default function FAQPage() {
     })),
   }
 
+  const origin = (process.env.SITE_URL || 'https://example.com').replace(/\/$/, '')
   const breadcrumb = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -45,13 +52,13 @@ export default function FAQPage() {
         '@type': 'ListItem',
         position: 1,
         name: 'ホーム',
-        item: process.env.SITE_URL || 'https://example.com',
+        item: origin,
       },
       {
         '@type': 'ListItem',
         position: 2,
         name: 'FAQ',
-        item: `${process.env.SITE_URL || 'https://example.com'}/faq`,
+        item: `${origin}/faq`,
       },
     ],
   }

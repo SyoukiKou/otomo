@@ -41,26 +41,32 @@ export default function Home() {
   )
 }
 
-export const metadata: Metadata = {
-  title: 'otomo — 音楽と仕事の両立を支援するキャリア相談',
-  description:
-    '音楽と仕事の両立を目指すあなたへ。経験豊富なキャリアアドバイザーが、実践的な行動プランを一緒に作ります。',
-  openGraph: {
+export async function generateMetadata({ request }: { request: Request }): Promise<Metadata> {
+  const url = new URL(request.url)
+  const origin = url.origin
+  const canonical = origin + url.pathname.replace(/\/$/, '') || origin + '/'
+
+  return {
     title: 'otomo — 音楽と仕事の両立を支援するキャリア相談',
     description:
       '音楽と仕事の両立を目指すあなたへ。経験豊富なキャリアアドバイザーが、実践的な行動プランを一緒に作ります。',
-    url: process.env.SITE_URL || 'https://example.com',
-    images: [
-      {
-        url: `${process.env.SITE_URL || 'https://example.com'}/og-image.svg`,
-        width: 1200,
-        height: 630,
-        alt: 'otomo — キャリア相談サービス',
-      },
-    ],
-    type: 'website',
-  },
-  alternates: {
-    canonical: process.env.SITE_URL || 'https://example.com',
-  },
+    openGraph: {
+      title: 'otomo — 音楽と仕事の両立を支援するキャリア相談',
+      description:
+        '音楽と仕事の両立を目指すあなたへ。経験豊富なキャリアアドバイザーが、実践的な行動プランを一緒に作ります。',
+      url: canonical,
+      images: [
+        {
+          url: `${origin}/og-image.svg`,
+          width: 1200,
+          height: 630,
+          alt: 'otomo — キャリア相談サービス',
+        },
+      ],
+      type: 'website',
+    },
+    alternates: {
+      canonical,
+    },
+  }
 }
