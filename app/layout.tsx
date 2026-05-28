@@ -3,6 +3,14 @@ import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
+const SITE_URL =
+  process.env.SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : null) ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
+  'https://otomo.thehearth.jp'
+
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
   variable: '--font-sans',
@@ -20,7 +28,7 @@ export const metadata: Metadata = {
   description:
     '音楽と仕事の両立を目指すあなたへ。キャリア相談を通じて、自分の人生の選択肢を一緒に考えるサービスです。',
   generator: 'v0.app',
-  metadataBase: new URL(process.env.SITE_URL || 'https://example.com'),
+  metadataBase: new URL(SITE_URL),
   icons: {
     icon: [
       {
@@ -42,14 +50,14 @@ export const metadata: Metadata = {
   authors: [
     {
       name: 'otomo',
-      url: process.env.SITE_URL || 'https://example.com',
+      url: SITE_URL,
     },
   ],
   openGraph: {
     title: 'otomo - キャリア相談サービス',
     description:
       '音楽と仕事の両立を目指すあなたへ。キャリア相談を通じて、自分の人生の選択肢を一緒に考えるサービスです。',
-    url: process.env.SITE_URL || 'https://example.com',
+    url: SITE_URL,
     siteName: 'otomo',
     images: [
       {
@@ -97,10 +105,10 @@ export default function RootLayout({
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'otomo',
-    url: process.env.SITE_URL || 'https://example.com',
+    url: SITE_URL,
     potentialAction: {
       '@type': 'SearchAction',
-      target: `${process.env.SITE_URL || 'https://example.com'}/?s={search_term_string}`,
+      target: `${SITE_URL}/?s={search_term_string}`,
       'query-input': 'required name=search_term_string',
     },
   }

@@ -1,7 +1,13 @@
 const fs = require('fs')
 const path = require('path')
 
-const SITE_URL = process.env.SITE_URL || 'https://example.com'
+const SITE_URL =
+  process.env.SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : null) ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : null) ||
+  'https://otomo.thehearth.jp'
 const APP_DIR = path.join(__dirname, '..', 'app')
 const OUT_PATH = path.join(__dirname, '..', 'public', 'sitemap.xml')
 
