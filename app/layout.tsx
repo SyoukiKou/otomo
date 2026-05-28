@@ -3,13 +3,13 @@ import { Noto_Sans_JP, Noto_Serif_JP } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const notoSansJP = Noto_Sans_JP({ 
+const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
   variable: '--font-sans',
   weight: ['400', '500', '600', '700']
 });
 
-const notoSerifJP = Noto_Serif_JP({ 
+const notoSerifJP = Noto_Serif_JP({
   subsets: ["latin"],
   variable: '--font-serif',
   weight: ['400', '500', '600', '700']
