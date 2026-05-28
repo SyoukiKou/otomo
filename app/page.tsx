@@ -8,6 +8,7 @@ import { ContactSection } from "@/components/contact-section"
 import { FAQSection, faqs } from "@/components/faq-section"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
+import { absoluteUrl, getRequestOrigin } from '@/lib/seo'
 
 export default function Home() {
   const faqJsonLd = {
@@ -41,10 +42,9 @@ export default function Home() {
   )
 }
 
-export async function generateMetadata({ request }: { request: Request }): Promise<Metadata> {
-  const url = new URL(request.url)
-  const origin = url.origin
-  const canonical = origin + url.pathname.replace(/\/$/, '') || origin + '/'
+export async function generateMetadata(): Promise<Metadata> {
+  const origin = await getRequestOrigin()
+  const canonical = absoluteUrl(origin, '/')
 
   return {
     title: 'otomo — 音楽と仕事の両立を支援するキャリア相談',
@@ -57,7 +57,7 @@ export async function generateMetadata({ request }: { request: Request }): Promi
       url: canonical,
       images: [
         {
-          url: `${origin}/og-image.svg`,
+          url: absoluteUrl(origin, '/og-image.svg'),
           width: 1200,
           height: 630,
           alt: 'otomo — キャリア相談サービス',

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { ServiceSection } from '@/components/service-section'
+import { absoluteUrl, getRequestOrigin } from '@/lib/seo'
 
-export async function generateMetadata({ request }: { request: Request }): Promise<Metadata> {
-  const url = new URL(request.url)
-  const origin = url.origin
-  const canonical = `${origin}/service`
+export async function generateMetadata(): Promise<Metadata> {
+  const origin = await getRequestOrigin()
+  const canonical = absoluteUrl(origin, '/service')
 
   return {
     title: 'サービス — otomo',
@@ -15,7 +15,7 @@ export async function generateMetadata({ request }: { request: Request }): Promi
       url: canonical,
       images: [
         {
-          url: `${origin}/og-service.svg`,
+          url: absoluteUrl(origin, '/og-service.svg'),
           width: 1200,
           height: 630,
           alt: 'otomo サービス',

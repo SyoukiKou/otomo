@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { FAQSection, faqs } from '@/components/faq-section'
+import { absoluteUrl, getRequestOrigin } from '@/lib/seo'
 
-export async function generateMetadata({ request }: { request: Request }): Promise<Metadata> {
-  const url = new URL(request.url)
-  const origin = url.origin
-  const canonical = `${origin}/faq`
+export async function generateMetadata(): Promise<Metadata> {
+  const origin = await getRequestOrigin()
+  const canonical = absoluteUrl(origin, '/faq')
 
   return {
     title: 'よくあるご質問 — otomo',
@@ -15,7 +15,7 @@ export async function generateMetadata({ request }: { request: Request }): Promi
       url: canonical,
       images: [
         {
-          url: `${origin}/og-faq.svg`,
+          url: absoluteUrl(origin, '/og-faq.svg'),
           width: 1200,
           height: 630,
           alt: 'otomo FAQ',
@@ -58,7 +58,7 @@ export default function FAQPage() {
         '@type': 'ListItem',
         position: 2,
         name: 'FAQ',
-        item: `${origin}/faq`,
+        item: absoluteUrl(origin, '/faq'),
       },
     ],
   }
