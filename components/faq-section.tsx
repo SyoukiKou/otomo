@@ -6,7 +6,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-const faqs = [
+export const faqs = [
   {
     question: "誰でも相談できますか？",
     answer: "はい、音楽を続けながら仕事もしたい、好きなことと生活のバランスを取りたいという方であれば誰でもご相談いただけます。学生、既卒者、転職を考えている方など、どのような方でもお気軽にお問い合わせください。"

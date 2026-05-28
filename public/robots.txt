@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# Sitemap is generated to `/public/sitemap.xml` by the build script.
+# Update SITE_URL in `.env.local` so sitemap entries use your real domain.
+Sitemap: /sitemap.xml
